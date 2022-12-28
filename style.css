@@ -1,3 +1,6 @@
+html{
+    background-color: #A6BB8D;
+}
 /* this sets the box element's sizes to include boarder, padding and content */
 * {
     box-sizing: border-box;
@@ -26,12 +29,12 @@
 header {
     width: 100%;
     height: 50px;
-    background-color: #1b1b32;
+    background-color: #3C6255;
     display: flex;
 }
 
 h1 {
-    color: #f1be32;
+    color: #EAE7B1;
     font-size: min(5vw, 1.2em);
 }
 
@@ -44,4 +47,9 @@ nav {
 nav>ul {
     display: flex;
     justify-content: space-evenly;
+}
+
+.contentdesign {
+    background-color: #EAE7B1;
+    color: black;
 }

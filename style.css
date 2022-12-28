@@ -53,3 +53,8 @@ nav>ul {
     background-color: #EAE7B1;
     color: black;
 }
+
+.deleteThis-itsOnlyForReference {
+    border: 4px black solid;
+    padding-left: 10px;
+}

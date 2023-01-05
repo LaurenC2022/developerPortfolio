@@ -1,16 +1,25 @@
 html{
-    background-color: #A6BB8D;
+
+    font-family: 'Courier New', Courier, monospace;
 }
 /* this sets the box element's sizes to include boarder, padding and content */
 * {
     box-sizing: border-box;
 }
+/* To not disorient users when navigating page.  */
+* {
+    scroll-behavior: smooth; 
+  }
 
 /* this removed preset margins and padding, so I can set them myself, 
         and avoid unnessisary struggle/ waiste time working with defaults */
 * {
     margin: 0;
     padding: 0;
+}
+
+main > ul {
+    list-style-type: "✨";
 }
 
 /* Class to hides words from visibility to add descriptions for screen readers only*/
@@ -29,13 +38,14 @@ html{
 header {
     width: 100%;
     height: 50px;
-    background-color: #3C6255;
+    background-color: #DBA39A;
     display: flex;
 }
 
 h1 {
-    color: #EAE7B1;
+    color: black;
     font-size: min(5vw, 1.2em);
+    font-weight: lighter;
 }
 
 nav {
@@ -50,11 +60,30 @@ nav>ul {
 }
 
 .contentdesign {
-    background-color: #EAE7B1;
+    background-color: #FEFCF3;
     color: black;
 }
 
 .deleteThis-itsOnlyForReference {
-    border: 4px black solid;
-    padding-left: 10px;
+    border: 1px black solid;
+
+}
+
+main {
+    float: right;
+    padding-left: 2em;
+    max-width: 70%;
+}
+
+aside {
+    float: left;
+}
+
+article {
+    clear: both;
+}
+
+footer {
+    background-color: #F0DBDB; 
+    text-align: center; 
 }

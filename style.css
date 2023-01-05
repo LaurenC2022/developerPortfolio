@@ -47,7 +47,7 @@ header {
 }
 
 /* to make main content start after header, set margin equal to header height */
-main{
+main, aside{
     margin-top: 64px;
 }
 

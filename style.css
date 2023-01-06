@@ -46,7 +46,7 @@ header {
     height: 64px;
 }
 
-/* to make main content start after header, set margin equal to header height */
+/* to make main content start after header, set margin equal to header height. Remember to incluse any floated element which is also directly below header with same margin */
 main, aside{
     margin-top: 64px;
 }
@@ -93,6 +93,8 @@ main {
 
 aside {
     float: left;
+    height: 150px; 
+    width: 30%;
 }
 
 article {

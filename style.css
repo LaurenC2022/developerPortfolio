@@ -20,7 +20,7 @@ html{
     padding: 0;
 }
 
-article > ul {
+article > ul.tab-stars {
     list-style-type: "✨";
 }
 
@@ -133,11 +133,11 @@ footer{
 }
 
 .tab{
-    text-indent: 20px;
+    text-indent:1vw;
 }
 
-.tab-stars{
-    margin-left: 35px;
+.tab-ul{
+    margin-left: 1vw;
 }
 
 .center-text{

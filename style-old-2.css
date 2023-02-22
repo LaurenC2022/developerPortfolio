@@ -1,0 +1,149 @@
+/* Add fallback to Style Sheet with @support, 3 versions: float/inline-block layout 1st, then flexbox, then css linearGradient
+see coding journal and style-old.css for help  */
+
+html{
+    font-family: 'Courier New', Courier, monospace;
+}
+/* this sets the box element's sizes to include boarder, padding and content */
+* {
+    box-sizing: border-box;
+}
+/* To not disorient users when navigating page.  */
+* {
+    scroll-behavior: smooth; 
+  }
+
+/* this removed preset margins and padding, so I can set them myself, 
+        and avoid unnessisary struggle/ waiste time working with defaults */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+article > ul.tab-stars {
+    list-style-type: "✨";
+}
+
+/* Class to hide words from visibility and add descriptions for screen readers only*/
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+header {
+    background-color: #DBA39A;
+    /* border-bottom: darkgray dotted 2px; */
+} 
+
+header > h1 {
+    color: black;
+    font-size: min(5vw, 1.2em);
+    font-weight: lighter;
+}
+
+
+.contentdesign {
+    background-color: #FEFCF3;
+    color: black;
+}
+
+/* .about-me, 
+.portfolio-resume{
+    display: inline-block;
+} */
+
+footer {
+    background-color: #F0DBDB; 
+    text-align: center; 
+    border-top: lightgray dotted 2px;
+}
+
+/* Layout: CSS Grid */
+
+body {
+    display: grid; 
+    grid-template-columns: 1fr 20rem; /*1 part of whole free space in column */
+    grid-template-rows: 2.5rem 1fr 5rem 4rem; 
+    gap: .5rem .5rem;
+    min-height: 100vh;
+}
+
+header {
+    grid-column: 1 / end;
+    grid-row: 1;
+    border-bottom: lightgray dotted 2px;
+}
+
+aside {
+    grid-column: 2 / end; 
+    grid-row: 2;
+    /* border: 1px solid black; */
+}
+
+article {
+    grid-column: 1;
+    grid-row: 2;
+
+}
+
+.contact-me{
+    grid-column: 1 / end;
+    grid-row: 3;
+    
+}
+
+footer {
+    grid-column: 1 / end;
+    grid-row: 4;
+    border-top: lightgray dotted 2px;
+}
+
+/* Padding */
+
+header{
+    padding-left: 20px;
+    padding-top: .5rem;
+    /* align-self: center; */
+}
+
+.portfolio-resume {
+    padding-left: 3rem;
+    padding-top: 1rem;
+}
+
+aside {
+    padding-top: 1rem;
+    padding-left: 20px;
+}
+
+.contact-me {
+    padding-top: 1rem;
+    padding-left: 15px;
+}
+
+footer{
+    padding-top: 1rem;
+}
+
+.tab{
+    text-indent:1vw;
+}
+
+.tab-ul{
+    margin-left: 1vw;
+}
+
+.center-text{
+    text-align: center;
+}
+
+@media screen and (min-width: 900px){
+
+}

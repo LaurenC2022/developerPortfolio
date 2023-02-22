@@ -3,6 +3,7 @@ see coding journal and style-old.css for help  */
 
 html{
     font-family: 'Courier New', Courier, monospace;
+    line-height: 1.5;
 }
 /* this sets the box element's sizes to include boarder, padding and content */
 * {
@@ -20,10 +21,6 @@ html{
     padding: 0;
 }
 
-article > ul.tab-stars {
-    list-style-type: "✨";
-}
-
 /* Class to hide words from visibility and add descriptions for screen readers only*/
 .sr-only {
     position: absolute;
@@ -37,109 +34,119 @@ article > ul.tab-stars {
     border: 0;
 }
 
-header {
-    background-color: #DBA39A;
-    /* border-bottom: darkgray dotted 2px; */
-} 
-
-header > h1 {
-    color: black;
-    font-size: min(5vw, 1.2em);
-    font-weight: lighter;
+:root{
+    --header-background: #DBA39A; 
+    --content-design-background: #FEFCF3; 
+    --footer-background: #F0DBDB; 
 }
 
-
-.contentdesign {
-    background-color: #FEFCF3;
-    color: black;
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    background: var(--content-design-background); 
 }
 
-/* .about-me, 
-.portfolio-resume{
-    display: inline-block;
-} */
-
-footer {
-    background-color: #F0DBDB; 
-    text-align: center; 
-    border-top: lightgray dotted 2px;
-}
-
-/* Layout: CSS Grid */
-
-body {
-    display: grid; 
-    grid-template-columns: 1fr 20rem; /*1 part of whole free space in column */
-    grid-template-rows: 2.5rem 1fr 5rem 4rem; 
-    gap: .5rem .5rem;
-    min-height: 100vh;
+nav ul{
+    list-style-type: none; 
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
 }
 
 header {
-    grid-column: 1 /end;
-    grid-row: 1;
+    background-color: var(--header-background);
+    position: fixed;
+    height: 120px; 
+    width: 100%; 
+    z-index: 3; 
     border-bottom: lightgray dotted 2px;
 }
 
-aside {
-    grid-column: 2 / end; 
-    grid-row: 2;
-    /* border: 1px solid black; */
+.logo-block{
+    text-align: center;
 }
 
-article {
-    grid-column: 1;
-    grid-row: 2;
-    
+h1{
+    font-size: min(5vw, 1.8rem);
+    font-weight: lighter;
+    white-space: nowrap;
 }
 
-.contact-me{
-    grid-column: 1 / end;
-    grid-row: 3;
-    
+nav h2{
+    white-space: nowrap;
+}
+
+nav li{
+    margin-left: 5px;
+    padding-right: 5px;
+}
+
+nav li:first-of-type::before{
+    content: "|";
+}
+
+nav li::after{
+    content: "|";
+}
+
+nav a:link, nav a:visited, nav a:hover, nav a:active{
+    text-decoration: none; 
+    color: blue; 
+  }
+
+#portfolio-resume{
+    padding-top: 130px;
+}
+
+main ul{
+    list-style-type: square; 
+    margin-left: 30px;
+}
+
+#portfolio-resume, #about-me, #contact-me{
+    margin-left: 8%;
+    margin-right: 8%; 
+    margin-bottom: 50px;
+}
+
+#contact-me{
+    margin-bottom: 30px;
+}
+
+h2{
+    font-size: min(5.4vw, 1.6rem);
+    font-weight: 500;
+}
+
+h3{
+    font-size: min(5.3vw, 1.4rem);
+    font-weight: lighter;
+}
+
+h4{
+    font-size: min(5.2vw, 1.2rem);
+    font-weight: lighter;
+}
+
+p, li{
+    font-size: 1.1rem;
+
 }
 
 footer {
-    grid-column: 1 / end;
-    grid-row: 4;
+    background-color: var(--footer-background); 
     border-top: lightgray dotted 2px;
-}
-
-/* Padding */
-
-header{
-    padding-left: 20px;
-    padding-top: .5rem;
-    /* align-self: center; */
-}
-
-.portfolio-resume {
-    padding-left: 3rem;
-    padding-top: 1rem;
-}
-
-aside {
-    padding-top: 1rem;
-    padding-left: 20px;
-}
-
-.contact-me {
-    padding-top: 1rem;
-    padding-left: 15px;
-}
-
-footer{
-    padding-top: 1rem;
-}
-
-.tab{
-    text-indent:1vw;
-}
-
-.tab-ul{
-    margin-left: 1vw;
-}
-
-.center-text{
     text-align: center;
+    padding: 25px 0 25px 0;
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+
+@media (min-width: 641px){
+    .logo-block{
+        text-align: left;
+        margin-left: 5%;
+        display: inline-block;
+    }
 }

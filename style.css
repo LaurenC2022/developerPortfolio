@@ -38,6 +38,7 @@ html{
     --header-background: #DBA39A; 
     --content-design-background: #FEFCF3; 
     --footer-background: #F0DBDB; 
+    --button-color: #DBA39A; 
 }
 
 main{
@@ -65,6 +66,7 @@ header {
 
 .logo-block{
     text-align: center;
+    margin-top: 10px;
 }
 
 h1{
@@ -110,6 +112,59 @@ main ul{
     margin-bottom: 50px;
 }
 
+#portfolio, #resume{
+    margin-bottom: 50px; 
+}
+
+#projects{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+#projects .project-card{
+    display: block;
+    border: darkgray solid 2px;
+    height: 311px; 
+    width: 300px;
+    margin: 0 10px 15px 10px;  
+    text-align: center;
+    padding: 30px 8px 0 8px;
+    border-radius: 10px;
+}
+
+.view-button{
+    display: inline-block;
+    border: darkgrey solid 2px;
+    width: 120px;
+    padding: 5px 0 5px 0;
+    background-color: var(--button-color);
+    margin: 10px 0 5px 0; 
+    border-radius: 5px;
+}
+
+.view-button a:link, .view-button a:visited, .view-button a:hover, .view-button a:active{
+    color: blue; 
+    text-decoration: none;
+}
+
+.code-button{
+    width: 120px;
+    height: 40px;
+}
+
+.project-botton{
+    width: 160px;
+    height: 40px;
+}
+
+.fcc-certificate{
+    width: 200px;
+    height: 70px;
+}
+
+
+
 #contact-me{
     margin-bottom: 30px;
 }
@@ -138,8 +193,8 @@ footer {
     background-color: var(--footer-background); 
     border-top: lightgray dotted 2px;
     text-align: center;
-    padding: 25px 0 25px 0;
-    font-size: 1.2rem;
+    padding: 25px 10px 25px 10px;
+    font-size: 1rem;
     font-weight: 100;
 }
 

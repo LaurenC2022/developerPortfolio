@@ -53,6 +53,7 @@ nav ul{
     display: flex;
     justify-content: center;
     white-space: nowrap;
+    margin: 0 5px 0 5px; 
 }
 
 header {

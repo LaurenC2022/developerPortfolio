@@ -41,6 +41,15 @@ html{
     --button-color: #DBA39A; 
 }
 
+header {
+    background-color: var(--header-background);
+    position: fixed;
+    height: 120px; 
+    width: 100%; 
+    z-index: 3; 
+    border-bottom: lightgray dotted 2px;
+}
+
 main{
     display: flex;
     flex-direction: column;
@@ -53,15 +62,6 @@ nav ul{
     display: flex;
     justify-content: center;
     white-space: nowrap; 
-}
-
-header {
-    background-color: var(--header-background);
-    position: fixed;
-    height: 120px; 
-    width: 100%; 
-    z-index: 3; 
-    border-bottom: lightgray dotted 2px;
 }
 
 .logo-block{

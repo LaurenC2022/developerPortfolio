@@ -1,2 +1,4 @@
 # developerPortfolio
-A place for portfolio links, resume appointment setup and client payment and account portal
+Lauren Collins: Frontend software developer 
+
+This repository is my personal protfolio website. 

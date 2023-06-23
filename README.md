@@ -1,4 +1,5 @@
 # developerPortfolio
-Lauren Collins: Frontend software developer 
 
-This repository is my personal protfolio website. 
+L. Collins: Frontend software developer
+
+This repository is my personal protfolio website.

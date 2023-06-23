@@ -1,207 +1,214 @@
 /* Add fallback to Style Sheet with @support, 3 versions: float/inline-block layout 1st, then flexbox, then css linearGradient
 see coding journal and style-old.css for help  */
 
-html{
-    font-family: 'Courier New', Courier, monospace;
-    line-height: 1.5;
+html {
+  font-family: 'Courier New', Courier, monospace;
+  line-height: 1.5;
 }
 /* this sets the box element's sizes to include boarder, padding and content */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 /* To not disorient users when navigating page.  */
 * {
-    scroll-behavior: smooth; 
-  }
+  scroll-behavior: smooth;
+}
 
 /* this removed preset margins and padding, so I can set them myself, 
         and avoid unnessisary struggle/ waiste time working with defaults */
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /* Class to hide words from visibility and add descriptions for screen readers only*/
 .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
-:root{
-    --header-background: #DBA39A; 
-    --content-design-background: #FEFCF3; 
-    --footer-background: #F0DBDB; 
-    --button-color: #DBA39A; 
+:root {
+  --header-background: lightgray;
+  --content-design-background: #fefcf3;
+  --footer-background: lightgray;
+  --button-color: darkgray;
 }
 
 header {
-    background-color: var(--header-background);
-    position: fixed;
-    height: 120px; 
-    width: 100%; 
-    z-index: 3; 
-    border-bottom: lightgray dotted 2px;
+  background-color: var(--header-background);
+  position: fixed;
+  height: 120px;
+  width: 100%;
+  z-index: 3;
+  border-bottom: lightgray dotted 2px;
 }
 
-main{
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
-    background: var(--content-design-background); 
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  background: var(--content-design-background);
 }
 
-nav ul{
-    list-style-type: none; 
-    display: flex;
-    justify-content: center;
-    white-space: nowrap; 
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  white-space: nowrap;
 }
 
-.logo-block{
-    text-align: center;
-    margin-top: 10px;
+.logo-block {
+  text-align: center;
+  margin-top: 10px;
 }
 
-h1{
-    font-size: min(5vw, 1.8rem);
-    font-weight: lighter;
-    white-space: nowrap;
+h1 {
+  font-size: min(5vw, 1.8rem);
+  font-weight: lighter;
+  white-space: nowrap;
 }
 
-nav h2{
-    white-space: nowrap;
+nav h2 {
+  white-space: nowrap;
 }
 
-nav li{
-    margin-left: 5px;
-    padding-right: 5px;
+nav li {
+  margin-left: 5px;
+  padding-right: 5px;
 }
 
-nav li:first-of-type::before{
-    content: "|";
+nav li:first-of-type::before {
+  content: '|';
 }
 
-nav li::after{
-    content: "|";
+nav li::after {
+  content: '|';
 }
 
-nav a:link, nav a:visited, nav a:hover, nav a:active{
-    text-decoration: none; 
-    color: blue; 
-  }
-
-#portfolio-resume{
-    padding-top: 130px;
+nav a:link,
+nav a:visited,
+nav a:hover,
+nav a:active {
+  text-decoration: none;
+  color: red;
 }
 
-main ul{
-    list-style-type: square; 
-    margin-left: 30px;
+#portfolio-resume {
+  padding-top: 130px;
 }
 
-#portfolio-resume, #about-me, #contact-me{
-    margin-left: 8%;
-    margin-right: 8%; 
-    margin-bottom: 50px;
+main ul {
+  list-style-type: square;
+  margin-left: 30px;
 }
 
-#portfolio, #resume{
-    margin-bottom: 50px; 
+#portfolio-resume,
+#about-me,
+#contact-me {
+  margin-left: 8%;
+  margin-right: 8%;
+  margin-bottom: 50px;
 }
 
-#projects{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
+#portfolio,
+#resume {
+  margin-bottom: 50px;
 }
 
-#projects .project-card{
-    display: block;
-    border: darkgray solid 2px;
-    height: 311px; 
-    width: 300px;
-    margin: 0 10px 15px 10px;  
-    text-align: center;
-    padding: 30px 8px 0 8px;
-    border-radius: 10px;
+#projects {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
 }
 
-.view-button{
-    display: inline-block;
-    border: darkgrey solid 2px;
-    width: 120px;
-    padding: 5px 0 5px 0;
-    background-color: var(--button-color);
-    margin: 10px 0 5px 0; 
-    border-radius: 5px;
+#projects .project-card {
+  display: block;
+  border: darkgray solid 2px;
+  height: 311px;
+  width: 300px;
+  margin: 0 10px 15px 10px;
+  text-align: center;
+  padding: 30px 8px 0 8px;
+  border-radius: 10px;
 }
 
-.view-button a:link, .view-button a:visited, .view-button a:hover, .view-button a:active{
-    color: blue; 
-    text-decoration: none;
+.view-button {
+  display: inline-block;
+  border: darkgrey solid 2px;
+  width: 120px;
+  padding: 5px 0 5px 0;
+  background-color: var(--button-color);
+  margin: 10px 0 5px 0;
+  border-radius: 5px;
 }
 
-.code-button{
-    width: 120px;
-    height: 40px;
+.view-button a:link,
+.view-button a:visited,
+.view-button a:hover,
+.view-button a:active {
+  color: red;
+  text-decoration: none;
 }
 
-.project-botton{
-    width: 160px;
-    height: 40px;
+.code-button {
+  width: 120px;
+  height: 40px;
 }
 
-.fcc-certificate{
-    width: 200px;
-    height: 70px;
+.project-botton {
+  width: 160px;
+  height: 40px;
 }
 
-
-
-#contact-me{
-    margin-bottom: 30px;
+.fcc-certificate {
+  width: 200px;
+  height: 70px;
 }
 
-h2{
-    font-size: min(5.4vw, 1.6rem);
-    font-weight: 500;
+#contact-me {
+  margin-bottom: 30px;
 }
 
-h3{
-    font-size: min(5.3vw, 1.4rem);
-    font-weight: lighter;
+h2 {
+  font-size: min(5.4vw, 1.6rem);
+  font-weight: 500;
 }
 
-h4{
-    font-size: min(5.2vw, 1.2rem);
-    font-weight: lighter;
+h3 {
+  font-size: min(5.3vw, 1.4rem);
+  font-weight: lighter;
 }
 
-p, li{
-    font-size: 1rem;
+h4 {
+  font-size: min(5.2vw, 1.2rem);
+  font-weight: lighter;
+}
 
+p,
+li {
+  font-size: 1rem;
 }
 
 footer {
-    background-color: var(--footer-background); 
-    border-top: lightgray dotted 2px;
-    text-align: center;
-    padding: 25px 10px 25px 10px;
-    font-size: 1rem;
-    font-weight: 100;
+  background-color: var(--footer-background);
+  border-top: lightgray dotted 2px;
+  text-align: center;
+  padding: 25px 10px 25px 10px;
+  font-size: 1rem;
+  font-weight: 100;
 }
 
-@media (min-width: 641px){
-    .logo-block{
-        text-align: left;
-        margin-left: 5%;
-        display: inline-block;
-    }
+@media (min-width: 641px) {
+  .logo-block {
+    text-align: left;
+    margin-left: 5%;
+    display: inline-block;
+  }
 }

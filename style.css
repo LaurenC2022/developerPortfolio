@@ -97,7 +97,7 @@ nav a:visited,
 nav a:hover,
 nav a:active {
   text-decoration: none;
-  color: red;
+  color:  black;
 }
 
 #portfolio-resume {
@@ -153,7 +153,7 @@ main ul {
 .view-button a:visited,
 .view-button a:hover,
 .view-button a:active {
-  color: red;
+  color: black;
   text-decoration: none;
 }
 

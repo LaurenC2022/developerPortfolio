@@ -2,7 +2,7 @@
 see coding journal and style-old.css for help  */
 
 html {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   line-height: 1.5;
 }
 /* this sets the box element's sizes to include boarder, padding and content */
@@ -85,11 +85,11 @@ nav li {
 }
 
 nav li:first-of-type::before {
-  content: '|';
+  content: "|";
 }
 
 nav li::after {
-  content: '|';
+  content: "|";
 }
 
 nav a:link,
@@ -97,7 +97,7 @@ nav a:visited,
 nav a:hover,
 nav a:active {
   text-decoration: none;
-  color:  black;
+  color: black;
 }
 
 #portfolio-resume {

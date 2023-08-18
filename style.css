@@ -215,7 +215,7 @@ footer {
   font-weight: 100;
 }
 
-@media (min-width: 530px) {
+@media (min-width: 520px) {
   nav li {
     font-size: 1.2rem;
   }

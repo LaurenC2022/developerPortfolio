@@ -115,6 +115,7 @@ main ul {
   margin-left: 8%;
   margin-right: 8%;
   margin-bottom: 50px;
+  display: block;
 }
 
 #portfolio,

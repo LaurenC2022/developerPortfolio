@@ -76,6 +76,13 @@ h1 {
   white-space: nowrap;
 }
 
+/* nav {
+  border: 3px solid rebeccapurple;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column-reverse;
+} */
+
 nav h2 {
   white-space: nowrap;
 }

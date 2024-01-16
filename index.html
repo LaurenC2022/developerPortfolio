@@ -25,8 +25,8 @@
       </div>
 
       <nav id="navbar">
-        <ul>
-          <li>
+        <ul id="nav_buttons_container">
+          <li class="nav_button">
             <p class="sr-only">click to navigate to</p>
             <a
               class="nav-link"
@@ -40,7 +40,7 @@
           </li>
           <li>
             <p class="sr-only">click to navigate to</p>
-            <a class="nav-link" href="#about-me" tabindex="0" accesskey="y">
+            <a class="nav-link" href="#top-About-Me" tabindex="0" accesskey="y">
               About Me
             </a>
             <p class="sr-only">section</p>
@@ -49,7 +49,7 @@
             <p class="sr-only">click to navigate to</p>
             <a
               class="nav-link letConnect"
-              href="#contact-me"
+              href="#lets-connect-top"
               tabindex="0"
               accesskey="z"
             >
@@ -67,36 +67,6 @@
           <h2>Portfolio</h2>
 
           <ul id="projects">
-            <li class="project-card">
-              QR Code Component
-
-              <ul>
-                <li class="view-button code-button">
-                  <a
-                    href="https://github.com/LaurenC2022/qr-code-component"
-                    target="_blank"
-                    tabindex="0"
-                    accesskey="a"
-                  >
-                    <p class="sr-only">click to</p>
-                    View Code
-                  </a>
-                </li>
-                <li class="view-button project-botton">
-                  <a
-                    href="https://laurenc2022.github.io/qr-code-component/"
-                    target="_blank"
-                    tabindex="0"
-                    accesskey="b"
-                  >
-                    <p class="sr-only">click to</p>
-                    View Project
-                  </a>
-                </li>
-              </ul>
-              HTML & CSS
-            </li>
-
             <li class="project-card">
               Random Quotes Machine
 
@@ -196,7 +166,7 @@
               >on the book titled Cracking the Coding Interview by Gayle
               Laakmann McDowell.
             </li>
-            <li>
+            <!-- <li>
               August 8, 2023 -
               <a
                 href="https://dev.to/laurenc2022/intro-to-self-identifying-your-technical-skills-with-blooms-taxonomy-a-series-of-blog-posts-2e6f"
@@ -208,7 +178,7 @@
                 (Post 1 of series)</a
               >
               an article I wrote on Dev.to
-            </li>
+            </li> -->
           </ul>
         </div>
         <br />
@@ -303,7 +273,7 @@
               JavaScript Algorithms and Data Structures Certification
             </a>
           </li>
-          <li>
+          <li id="top-About-Me">
             To see the high quality learning materials I have used at different
             times to study programming, please use the following link and view
             my learning dashboard on Notion:<a
@@ -352,7 +322,11 @@
           a global, fully remote position as I am currently living in East Asia.
         </p>
         <br />
-        <img src="lauren-collins-logo.png" alt="Photo of Lauren" />
+        <img
+          id="lets-connect-top"
+          src="lauren-collins-logo.png"
+          alt="Photo of Lauren"
+        />
       </aside>
 
       <article id="contact-me" class="contentdesign">
